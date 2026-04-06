@@ -1,0 +1,11 @@
+# Build artifacts
+pkg/
+src/
+*.pkg.tar.zst
+
+# Python
+__pycache__/
+*.pyc
+
+# Misc
+*.log
