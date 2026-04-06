@@ -8,12 +8,13 @@ license=('GPL3')
 depends=('python' 'python-gobject' 'gtk3' 'polkit')
 optdepends=('bluez: Bluetooth support')
 source=(
-    "src/everydaylinuxusertools.py"
-    "desktop/everydaylinuxusertools.desktop"
+    "https://github.com/yourusername/everydaylinuxusertools/archive/refs/tags/v${pkgver}.tar.gz"
 )
-sha256sums=('SKIP' 'SKIP')
+sha256sums=('SKIP')  # You should replace SKIP with the actual checksum
 
 package() {
+    cd "${srcdir}/everydaylinuxusertools-${pkgver}"
+
     # Install main script
     install -Dm755 src/everydaylinuxusertools.py \
         "$pkgdir/usr/bin/everydaylinuxusertools"
