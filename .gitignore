@@ -1,6 +1,5 @@
 # Build artifacts
 pkg/
-src/
 *.pkg.tar.zst
 
 # Python
